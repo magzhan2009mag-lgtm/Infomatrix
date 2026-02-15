@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вход | QazaqCompetition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="header">
+      <a href="index.html" class="logo">Qazaq<span>Competition</span></a>
+      <nav class="nav" aria-label="Главная навигация">
+        <a href="index.html">Главная</a>
+        <a href="aboutUs.html">О нас</a>
+        <a href="competitions.html">Соревнования</a>
+        <a href="live.html">Live & Видео</a>
+        <a href="register.html">Регистрация</a>
+      </nav>
+      <div class="header-right"><div id="auth-controls"></div></div>
+    </header>
+
+    <main>
+      <section class="auth-layout">
+        <article class="panel">
+          <span class="eyebrow">Вход в аккаунт</span>
+          <h2>Добро пожаловать обратно</h2>
+          <form id="login-form" class="auth-form">
+            <input class="input" type="email" name="email" placeholder="Email" required />
+            <input class="input" type="password" name="password" placeholder="Пароль" required />
+            <button class="button" type="submit">Войти</button>
+          </form>
+
+          <div class="inline-note" style="margin-top: 1rem;">
+            Нет аккаунта? <a href="register.html">Создать профиль</a>
+          </div>
+        </article>
+
+        <article class="panel">
+          <span class="eyebrow">Демо доступы</span>
+          <h2>Тестовые аккаунты</h2>
+          <div class="steps-list">
+            <div class="step-item"><span class="demo-code">participant@qazaq.kz / demo123</span></div>
+            <div class="step-item"><span class="demo-code">judge@qazaq.kz / demo123</span></div>
+            <div class="step-item"><span class="demo-code">organizer@qazaq.kz / demo123</span></div>
+            <div class="step-item"><span class="demo-code">admin@qazaq.kz / demo123</span></div>
+          </div>
+        </article>
+      </section>
+
+      <div id="auth-message" class="notice"></div>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 QazaqCompetition. Платформа соревнований нового поколения.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

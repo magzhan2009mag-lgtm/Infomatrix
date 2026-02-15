@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organizer Marketplace | QazaqCompetition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="header">
+      <a href="index.html" class="logo">Qazaq<span>Competition</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="aboutUs.html">About</a>
+        <a href="competitions.html">Competitions</a>
+        <a href="hall-of-fame.html">Hall of Fame</a>
+        <a href="live.html">Live</a>
+        <a href="news.html">News</a>
+        <a href="bonuses.html">Bonuses</a>
+        <a href="profile.html">Profile</a>
+        <a href="judge-panel.html">Judge Panel</a>
+        <a href="organizer-panel.html">Organizer Panel</a>
+        <a class="active" href="organizer-marketplace.html">Marketplace</a>
+      </nav>
+      <div class="header-right"><div id="auth-controls"></div></div>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <div>
+          <span class="eyebrow">Organizer Marketplace</span>
+          <h1>Rent equipment, venue, and team</h1>
+          <p>Cards show short info by default. Click Details to expand and then add to cart.</p>
+        </div>
+        <div class="page-intro-media">
+          <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1200&q=80" alt="Marketplace services" />
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Equipment</h2>
+        <div id="market-equipment" class="cards-grid">
+          <p class="muted">Loading...</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Venue</h2>
+        <div id="market-venue" class="cards-grid">
+          <p class="muted">Loading...</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Event Team (separate block)</h2>
+        <div id="market-team" class="cards-grid">
+          <p class="muted">Loading...</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Rental Cart</h2>
+        <div id="market-cart"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 QazaqCompetition. Next generation competitions platform.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

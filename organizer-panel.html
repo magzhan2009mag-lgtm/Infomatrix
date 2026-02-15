@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Панель Организатора | QazaqCompetition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="header">
+      <a href="index.html" class="logo">Qazaq<span>Competition</span></a>
+      <nav class="nav" aria-label="Главная навигация">
+        <a href="index.html">Главная</a>
+        <a href="aboutUs.html">О нас</a>
+        <a href="competitions.html">Соревнования</a>
+        <a href="hall-of-fame.html">Зал славы</a>
+        <a href="live.html">Live & Видео</a>
+        <a href="bonuses.html">Бонусы</a>
+        <a href="profile.html">Профиль</a>
+        <a href="judge-panel.html">Панель судьи</a>
+        <a class="active" href="organizer-panel.html">Панель организатора</a>
+      </nav>
+      <div class="header-right"><div id="auth-controls"></div></div>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <div>
+          <span class="eyebrow">Organizer Panel</span>
+          <h1>Создавай соревнования и подключай сервисы проведения</h1>
+          <p>Панель доступна ролям Организатор и Админ. Здесь же доступна AI-жеребьевка.</p>
+        </div>
+        <div class="page-intro-media">
+          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80" alt="Организация события" />
+        </div>
+      </section>
+
+      <section class="grid-2">
+        <article class="panel">
+          <h2>Создать соревнование</h2>
+          <form id="competition-create-form" class="form-grid">
+            <input class="input" type="text" name="title" placeholder="Название" required />
+            <input class="input" type="text" name="city" placeholder="Город" required />
+            <input class="input" type="text" name="category" placeholder="Категория" required />
+            <select name="format" required>
+              <option value="">Выбери формат</option>
+              <option value="Офлайн">Офлайн</option>
+              <option value="Онлайн">Онлайн</option>
+              <option value="Гибрид">Гибрид</option>
+            </select>
+            <input class="input" type="date" name="start_date" required />
+            <input class="input" type="number" name="entry_fee" placeholder="Взнос, ₸" />
+            <input class="input" type="url" name="image_url" placeholder="Ссылка на фото" />
+            <textarea name="description" placeholder="Описание турнира"></textarea>
+            <button class="button" type="submit">Создать</button>
+          </form>
+        </article>
+
+        <article class="panel">
+          <h2>AI-жеребьевка</h2>
+          <form id="draw-form" class="form-grid">
+            <input class="input" type="number" name="competition_id" placeholder="ID соревнования" required />
+            <button class="button" type="submit">Сгенерировать пары</button>
+          </form>
+
+          <h2 style="margin-top: 1rem;">Услуги для турнира</h2>
+          <div id="services-list" class="list-grid">
+            <p class="muted">Загрузка услуг...</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <h2>Мои соревнования</h2>
+        <div id="organizer-list" class="list-grid">
+          <p class="muted">Загрузка списка...</p>
+        </div>
+      </section>
+
+      <div id="organizer-message" class="notice"></div>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 QazaqCompetition. Платформа соревнований нового поколения.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+

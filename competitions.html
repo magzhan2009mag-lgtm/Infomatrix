@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Соревнования | QazaqCompetition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=20260213-1" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="header">
+      <a href="index.html" class="logo">Qazaq<span>Competition</span></a>
+      <nav class="nav" aria-label="Главная навигация">
+        <a href="index.html">Главная</a>
+        <a href="aboutUs.html">О нас</a>
+        <a class="active" href="competitions.html">Соревнования</a>
+        <a href="hall-of-fame.html">Зал славы</a>
+        <a href="live.html">Live & Видео</a>
+        <a href="bonuses.html">Бонусы</a>
+        <a href="profile.html">Профиль</a>
+        <a href="judge-panel.html">Панель судьи</a>
+        <a href="organizer-panel.html">Панель организатора</a>
+      </nav>
+      <div class="header-right"><div id="auth-controls"></div></div>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <div>
+          <span class="eyebrow">Каталог турниров</span>
+          <h1>Выбирай соревнования по формату, дате и категории</h1>
+          <p>После входа в аккаунт можно сразу зарегистрироваться и получить AI-советы по подготовке.</p>
+          <p><strong>Обновлено:</strong> карточки идут по 1 соревнованию в строке с расширенными полями (время, призовой фонд, квота).</p>
+        </div>
+        <div class="page-intro-media">
+          <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?auto=format&fit=crop&w=1200&q=80" alt="Спортивные соревнования" />
+        </div>
+      </section>
+
+      <section class="panel">
+        <form id="search-form" class="search-toolbar">
+          <input id="search-input" class="input search-input" type="text" placeholder="Поиск соревнований по названию, городу или описанию" />
+          <button id="open-filters-btn" class="button ghost" type="button">Фильтры</button>
+          <button class="button" type="submit">Применить</button>
+        </form>
+        <div id="competition-message" class="notice"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Соревнование для вас</h2>
+        <div class="quick-examples">
+          <button class="quick-example-card" type="button" data-q="Astana Robotics Cup">
+            <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=900&q=80" alt="Astana Robotics Cup" />
+            <div><h3>Astana Robotics Cup</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="Almaty Debate League">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80" alt="Almaty Debate League" />
+            <div><h3>Almaty Debate League</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="Qazaq Math Open">
+            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=900&q=80" alt="Qazaq Math Open" />
+            <div><h3>Qazaq Math Open</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="Steppe Chess Masters">
+            <img src="https://images.unsplash.com/photo-1586165368502-1bad197a6461?auto=format&fit=crop&w=900&q=80" alt="Steppe Chess Masters" />
+            <div><h3>Steppe Chess Masters</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="Cyber Arena KZ">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80" alt="Cyber Arena KZ" />
+            <div><h3>Cyber Arena KZ</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="Eco Science Challenge">
+            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=900&q=80" alt="Eco Science Challenge" />
+            <div><h3>Eco Science Challenge</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="Startup Sprint KZ">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Startup Sprint KZ" />
+            <div><h3>Startup Sprint KZ</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="National Coding Cup">
+            <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=900&q=80" alt="National Coding Cup" />
+            <div><h3>National Coding Cup</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="Qazaq Art Battle">
+            <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=900&q=80" alt="Qazaq Art Battle" />
+            <div><h3>Qazaq Art Battle</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="Physics Grand Prix">
+            <img src="https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?auto=format&fit=crop&w=900&q=80" alt="Physics Grand Prix" />
+            <div><h3>Physics Grand Prix</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="Youth Football Cup">
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=900&q=80" alt="Youth Football Cup" />
+            <div><h3>Youth Football Cup</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="AI Hack Week">
+            <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=900&q=80" alt="AI Hack Week" />
+            <div><h3>AI Hack Week</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="National Dance Fest">
+            <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=900&q=80" alt="National Dance Fest" />
+            <div><h3>National Dance Fest</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="Chemistry League KZ">
+            <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=900&q=80" alt="Chemistry League KZ" />
+            <div><h3>Chemistry League KZ</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="Open Swimming Trials">
+            <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=900&q=80" alt="Open Swimming Trials" />
+            <div><h3>Open Swimming Trials</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="Media Skills Challenge">
+            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=900&q=80" alt="Media Skills Challenge" />
+            <div><h3>Media Skills Challenge</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="Bio Future Tournament">
+            <img src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?auto=format&fit=crop&w=900&q=80" alt="Bio Future Tournament" />
+            <div><h3>Bio Future Tournament</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="Qazaq Language Cup">
+            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=900&q=80" alt="Qazaq Language Cup" />
+            <div><h3>Qazaq Language Cup</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="University Case Marathon">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="University Case Marathon" />
+            <div><h3>University Case Marathon</h3></div>
+          </button>
+          <button class="quick-example-card" type="button" data-q="Drone Racing Open">
+            <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=900&q=80" alt="Drone Racing Open" />
+            <div><h3>Drone Racing Open</h3></div>
+          </button>
+        </div>
+      </section>
+
+      <section id="competitions-list" class="competitions-grid"></section>
+
+      <div id="filter-modal" class="filter-modal" aria-hidden="true">
+        <div class="filter-overlay" id="filter-overlay"></div>
+        <section class="filter-sheet">
+          <div class="filter-head">
+            <h2>Фильтры соревнований</h2>
+            <button id="close-filters-btn" class="button tiny ghost" type="button">Закрыть</button>
+          </div>
+          <form id="filters-form" class="modal-filter-form">
+            <label>Город
+              <select name="city">
+                <option value="">Любой</option>
+                <option value="Астана">Астана</option>
+                <option value="Алматы">Алматы</option>
+                <option value="Шымкент">Шымкент</option>
+                <option value="Караганда">Караганда</option>
+                <option value="Актобе">Актобе</option>
+                <option value="Атырау">Атырау</option>
+                <option value="Павлодар">Павлодар</option>
+              </select>
+            </label>
+            <label>Возраст
+              <select name="age_group">
+                <option value="">Любой</option>
+                <option value="9-22">9-22</option>
+                <option value="10-16">10-16</option>
+                <option value="12-18">12-18</option>
+                <option value="13-22">13-22</option>
+                <option value="14-17">14-17</option>
+                <option value="14-19">14-19</option>
+                <option value="16-22">16-22</option>
+                <option value="18-30">18-30</option>
+              </select>
+            </label>
+            <label>Вид соревнования
+              <select name="competition_type">
+                <option value="">Любой</option>
+                <option value="Спорт">Спорт</option>
+                <option value="Олимпиада">Олимпиада</option>
+                <option value="Технологии">Технологии</option>
+                <option value="Бизнес">Бизнес</option>
+                <option value="Творческий">Творческий</option>
+                <option value="Наука">Наука</option>
+                <option value="Киберспорт">Киберспорт</option>
+                <option value="Интеллектуальный">Интеллектуальный</option>
+              </select>
+            </label>
+            <label>Формат
+              <select name="format">
+                <option value="">Любой</option>
+                <option value="Офлайн">Офлайн</option>
+                <option value="Онлайн">Онлайн</option>
+                <option value="Гибрид">Гибрид</option>
+              </select>
+            </label>
+            <label>Тип оплаты
+              <select name="fee_type">
+                <option value="">Все</option>
+                <option value="free">Бесплатное</option>
+                <option value="paid">Платное</option>
+              </select>
+            </label>
+            <label>Категория
+              <input class="input" type="text" name="category" placeholder="Например: Робототехника" />
+            </label>
+            <label>Дата от
+              <input class="input" type="date" name="date" />
+            </label>
+            <label>Сортировка
+              <select name="sort">
+                <option value="date_asc">По дате (ближайшие)</option>
+                <option value="date_desc">По дате (дальше)</option>
+                <option value="fee_asc">По взносу (дешевле)</option>
+                <option value="fee_desc">По взносу (дороже)</option>
+                <option value="popular">По популярности</option>
+              </select>
+            </label>
+            <div class="filter-actions">
+              <button class="button ghost" id="reset-filters-btn" type="button">Сбросить</button>
+              <button class="button" type="submit">Применить фильтры</button>
+            </div>
+          </form>
+        </section>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 QazaqCompetition. Платформа соревнований нового поколения.</p>
+    </footer>
+  </div>
+  <script src="script.js?v=20260213-1"></script>
+</body>
+</html>
+
+

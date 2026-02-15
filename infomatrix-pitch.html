@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infomatrix Pitch | logo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #07131c;
+      --bg-soft: #0c1d29;
+      --card: #0f2331;
+      --line: #1e3a4b;
+      --text: #e7f1f6;
+      --muted: #9ab1bf;
+      --teal: #14b8a6;
+      --orange: #f59e0b;
+      --teal-soft: #0b6b68;
+      --orange-soft: #9a6810;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(20, 184, 166, 0.18), transparent 34%),
+        radial-gradient(circle at 88% 12%, rgba(245, 158, 11, 0.14), transparent 32%),
+        var(--bg);
+    }
+
+    .deck {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 22px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .slide {
+      border: 1px solid var(--line);
+      background: linear-gradient(165deg, rgba(15, 35, 49, 0.92), rgba(8, 18, 27, 0.96));
+      border-radius: 22px;
+      padding: 28px;
+      min-height: 70vh;
+      display: grid;
+      gap: 16px;
+      align-content: start;
+      box-shadow: 0 18px 60px rgba(2, 8, 15, 0.35);
+    }
+
+    .eyebrow {
+      color: var(--teal);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    h1, h2 { margin: 0; line-height: 1.15; }
+    h1 { font-size: clamp(34px, 6vw, 56px); max-width: 900px; }
+    h2 { font-size: clamp(26px, 4vw, 38px); }
+    p { margin: 0; color: var(--muted); max-width: 880px; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      background: rgba(6, 19, 28, 0.54);
+      border-radius: 16px;
+      padding: 14px;
+    }
+
+    .card strong { color: #f0fbff; }
+
+    .kpi {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .kpi article {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(4, 13, 19, 0.6);
+      padding: 12px;
+    }
+
+    .kpi h3 {
+      margin: 0;
+      font: 700 26px/1 "JetBrains Mono", monospace;
+      color: var(--teal);
+    }
+
+    .pill {
+      display: inline-block;
+      border-radius: 999px;
+      border: 1px solid var(--teal-soft);
+      color: #adf5ef;
+      background: rgba(20, 184, 166, 0.12);
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+
+    .orange {
+      border-color: var(--orange-soft);
+      color: #ffe3ad;
+      background: rgba(245, 158, 11, 0.12);
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      align-items: center;
+    }
+
+    .flow .node {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+      font-size: 13px;
+      background: rgba(11, 29, 41, 0.7);
+    }
+
+    .flow .arrow { text-align: center; color: var(--teal); font-weight: 800; }
+
+    .final {
+      display: grid;
+      gap: 12px;
+      align-content: center;
+      justify-items: start;
+    }
+
+    .cta {
+      display: inline-flex;
+      border: 1px solid var(--orange-soft);
+      background: linear-gradient(130deg, rgba(245, 158, 11, 0.2), rgba(20, 184, 166, 0.12));
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: #fff2d1;
+      font-weight: 800;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2, .kpi { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr; }
+      .flow .arrow { display: none; }
+      .slide { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck">
+    <section class="slide">
+      <span class="eyebrow">Infomatrix Hackathon Pitch</span>
+      <h1>logo</h1>
+      <h2>Единая платформа соревнований Казахстана</h2>
+      <p>От поиска олимпиад до управления турниром и AI-поддержки в одном продукте.</p>
+      <div>
+        <span class="pill">Web Platform</span>
+        <span class="pill">AI Assistant</span>
+        <span class="pill orange">Startup-ready MVP</span>
+      </div>
+    </section>
+
+    <section class="slide">
+      <span class="eyebrow">Проблема</span>
+      <h2>Текущий рынок соревнований фрагментирован</h2>
+      <div class="grid-2">
+        <article class="card"><strong>Сложно найти соревнования</strong><p>Информация разбросана по сайтам, чатам и соцсетям.</p></article>
+        <article class="card"><strong>Разрозненная регистрация</strong><p>У каждого турнира свой процесс без единого стандарта.</p></article>
+        <article class="card"><strong>Сложности у организаторов</strong><p>Много ручной работы: учет, пары, коммуникация, контроль.</p></article>
+        <article class="card"><strong>Нет сквозной аналитики</strong><p>Участники и команды не видят общую картину роста.</p></article>
+      </div>
+    </section>
+
+    <section class="slide">
+      <span class="eyebrow">Решение</span>
+      <h2>Одна платформа: поиск, регистрация, управление, AI</h2>
+      <p>logo объединяет участника, судью, организатора и зрителя в едином цифровом контуре.</p>
+      <div class="kpi">
+        <article><h3>1</h3><p>единый каталог</p></article>
+        <article><h3>1</h3><p>личный профиль</p></article>
+        <article><h3>4</h3><p>роли в системе</p></article>
+        <article><h3>AI</h3><p>персональный слой</p></article>
+      </div>
+    </section>
+
+    <section class="slide">
+      <span class="eyebrow">Наш подход</span>
+      <h2>Снижаем барьеры участия и ускоряем организацию</h2>
+      <p>Мы упрощаем участие в соревнованиях, объединяя регистрацию, информацию и управление турнирами в одной интеллектуальной платформе. Участники легко находят подходящие конкурсы, а организаторы быстро проводят мероприятия.</p>
+      <div class="flow">
+        <div class="node">Поиск и фильтры</div>
+        <div class="arrow">></div>
+        <div class="node">AI подбор</div>
+        <div class="arrow">></div>
+        <div class="node">Регистрация и участие</div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <span class="eyebrow">Функции</span>
+      <h2>Core-функционал платформы</h2>
+      <div class="grid-2">
+        <article class="card"><strong>AI подбор и оценка шансов</strong><p>Рекомендации турниров и прогноз по участникам.</p></article>
+        <article class="card"><strong>Регистрация и информация</strong><p>Карточки, фильтры, быстрый вход в соревнование.</p></article>
+        <article class="card"><strong>Сетки, очки, уведомления</strong><p>Запуск турнирного этапа, подсчет результатов, оповещения.</p></article>
+        <article class="card"><strong>Live трансляции</strong><p>Текущие эфиры и архив матчей в одном разделе.</p></article>
+        <article class="card"><strong>Панель организатора</strong><p>QR-верификация, контроль процесса, запуск турнира.</p></article>
+        <article class="card"><strong>Панель судьи</strong><p>Оценивание выступлений и фиксация результатов.</p></article>
+      </div>
+    </section>
+
+    <section class="slide">
+      <span class="eyebrow">Основные функции платформы</span>
+      <h2>Что уже доступно в MVP</h2>
+      <div>
+        <span class="pill">Регистрация на соревнования</span>
+        <span class="pill">AI рекомендации</span>
+        <span class="pill">Live матчи</span>
+        <span class="pill">Зал славы достижений</span>
+        <span class="pill orange">Marketplace услуг организаторов</span>
+      </div>
+      <div class="card">
+        <p>MVP покрывает ключевой пользовательский сценарий: найти конкурс > зарегистрироваться > участвовать > получить оценку и аналитику.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <span class="eyebrow">Турнирный модуль</span>
+      <h2>От запуска до результата в одном экране</h2>
+      <div class="grid-2">
+        <article class="card"><strong>Жеребьевка</strong><p>Автоматическое формирование пар.</p></article>
+        <article class="card"><strong>Сетка турнира</strong><p>Визуальный список матчей стартового раунда.</p></article>
+        <article class="card"><strong>Подсчет очков</strong><p>Судейские оценки сразу отражаются в системе.</p></article>
+        <article class="card"><strong>Уведомления</strong><p>Участники и организатор получают события по турниру.</p></article>
+      </div>
+      <div class="cta">Кнопка «Провести турнир» запускает раунд и рассылку уведомлений</div>
+    </section>
+
+    <section class="slide">
+      <span class="eyebrow">Ценность</span>
+      <h2>Польза для участников и организаторов</h2>
+      <div class="grid-2">
+        <article class="card">
+          <strong>Участники</strong>
+          <p>Быстрый поиск, прозрачные условия, AI-советы, история достижений, live-доступ.</p>
+        </article>
+        <article class="card">
+          <strong>Организаторы</strong>
+          <p>Управление турниром, запуск сетки, сервисный маркетплейс, контроль верификации и коммуникаций.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="slide">
+      <span class="eyebrow">Монетизация и развитие</span>
+      <h2>Устойчивая бизнес-модель</h2>
+      <div class="grid-2">
+        <article class="card"><strong>Платные функции организаторам</strong><p>Расширенная аналитика, массовые рассылки, брендирование турнира.</p></article>
+        <article class="card"><strong>Партнерства</strong><p>Интеграции с образовательными центрами и федерациями.</p></article>
+        <article class="card"><strong>Реклама</strong><p>Таргетированные размещения для брендов в тематических категориях.</p></article>
+        <article class="card"><strong>Premium AI</strong><p>Прогнозы, персональная траектория подготовки, AI-ассистент для команд.</p></article>
+      </div>
+    </section>
+
+    <section class="slide">
+      <span class="eyebrow">Roadmap / MVP</span>
+      <h2>Статус и следующий этап</h2>
+      <div class="grid-2">
+        <article class="card"><strong>Уже реализовано</strong><p>Роли пользователей, каталог, регистрация, AI-инструменты, live, панель судьи, панель организатора, турнирный запуск.</p></article>
+        <article class="card"><strong>Следующий спринт</strong><p>Полноценная bracket-визуализация, push-уведомления, мобильная адаптация для массового запуска.</p></article>
+      </div>
+    </section>
+
+    <section class="slide final">
+      <span class="eyebrow">Final Slide</span>
+      <h2>logo делает рынок соревнований Казахстана единым и масштабируемым</h2>
+      <p>Мы строим цифровую инфраструктуру, где участники быстрее растут, а организаторы проводят турниры с меньшими издержками и более высоким качеством.</p>
+      <div class="cta">Готовы к пилоту и партнерству с регионами, школами, вузами и федерациями</div>
+    </section>
+  </main>
+</body>
+</html>

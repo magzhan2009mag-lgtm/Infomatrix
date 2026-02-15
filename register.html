@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Регистрация | QazaqCompetition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="header">
+      <a href="index.html" class="logo">Qazaq<span>Competition</span></a>
+      <nav class="nav" aria-label="Главная навигация">
+        <a href="index.html">Главная</a>
+        <a href="aboutUs.html">О нас</a>
+        <a href="competitions.html">Соревнования</a>
+        <a href="live.html">Live & Видео</a>
+        <a href="login.html">Вход</a>
+      </nav>
+      <div class="header-right"><div id="auth-controls"></div></div>
+    </header>
+
+    <main>
+      <section class="auth-layout">
+        <article class="panel">
+          <span class="eyebrow">Новый пользователь</span>
+          <h2>Создай аккаунт</h2>
+          <form id="register-form" class="auth-form">
+            <input class="input" type="text" name="name" placeholder="Имя" required />
+            <input class="input" type="email" name="email" placeholder="Email" required />
+            <input class="input" type="password" name="password" placeholder="Пароль" required />
+            <select name="role">
+              <option value="participant">Участник</option>
+              <option value="judge">Судья</option>
+              <option value="organizer">Организатор</option>
+              <option value="spectator">Зритель</option>
+            </select>
+            <button class="button" type="submit">Создать аккаунт</button>
+          </form>
+
+          <div class="inline-note" style="margin-top: 1rem;">
+            Уже есть аккаунт? <a href="login.html">Перейти ко входу</a>
+          </div>
+        </article>
+
+        <article class="panel">
+          <span class="eyebrow">Что дальше</span>
+          <h2>После регистрации</h2>
+          <div class="steps-list">
+            <div class="step-item">Аккаунт создается сразу.</div>
+            <div class="step-item">Профиль создается автоматически.</div>
+            <div class="step-item">Ты попадешь в <a href="profile.html">личный профиль</a>.</div>
+            <div class="step-item">В навигации останутся только нужные разделы по роли.</div>
+          </div>
+        </article>
+      </section>
+
+      <div id="auth-message" class="notice"></div>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 QazaqCompetition. Платформа соревнований нового поколения.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

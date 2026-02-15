@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Панель Судьи | QazaqCompetition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="header">
+      <a href="index.html" class="logo">Qazaq<span>Competition</span></a>
+      <nav class="nav" aria-label="Главная навигация">
+        <a href="index.html">Главная</a>
+        <a href="aboutUs.html">О нас</a>
+        <a href="competitions.html">Соревнования</a>
+        <a href="hall-of-fame.html">Зал славы</a>
+        <a href="live.html">Live & Видео</a>
+        <a href="bonuses.html">Бонусы</a>
+        <a href="profile.html">Профиль</a>
+        <a class="active" href="judge-panel.html">Панель судьи</a>
+        <a href="organizer-panel.html">Панель организатора</a>
+      </nav>
+      <div class="header-right"><div id="auth-controls"></div></div>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <div>
+          <span class="eyebrow">Judge Panel</span>
+          <h1>Оценка участников и QR-проверка регистрации</h1>
+          <p>Доступно пользователям с ролью Судья или Админ.</p>
+        </div>
+        <div class="page-intro-media">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80" alt="Судья в панели оценки" />
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Матчи судьи</h2>
+        <div id="judge-matches" class="list-grid">
+          <p class="muted">Загрузка матчей...</p>
+        </div>
+      </section>
+
+      <section class="grid-2">
+        <article class="panel">
+          <h2>Начислить баллы</h2>
+          <form id="judge-score-form" class="form-grid">
+            <input class="input" type="number" name="match_id" placeholder="ID матча" required />
+            <input class="input" type="number" name="participant_id" placeholder="ID участника" required />
+            <input class="input" type="number" name="points" placeholder="Баллы" required />
+            <textarea name="comment" placeholder="Комментарий судьи"></textarea>
+            <button class="button" type="submit">Сохранить оценку</button>
+          </form>
+        </article>
+
+        <article class="panel">
+          <h2>QR-проверка участника</h2>
+          <form id="judge-qr-form" class="form-grid">
+            <input class="input" type="number" name="competition_id" placeholder="ID соревнования" required />
+            <input class="input" type="email" name="participant_email" placeholder="Email участника" required />
+            <button class="button" type="submit">Проверить и отметить</button>
+          </form>
+        </article>
+      </section>
+
+      <div id="judge-message" class="notice"></div>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 QazaqCompetition. Платформа соревнований нового поколения.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+

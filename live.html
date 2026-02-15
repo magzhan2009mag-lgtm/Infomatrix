@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live & Видео | QazaqCompetition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="header">
+      <a href="index.html" class="logo">Qazaq<span>Competition</span></a>
+      <nav class="nav" aria-label="Главная навигация">
+        <a href="index.html">Главная</a>
+        <a href="aboutUs.html">О нас</a>
+        <a href="competitions.html">Соревнования</a>
+        <a href="hall-of-fame.html">Зал славы</a>
+        <a class="active" href="live.html">Live & Видео</a>
+        <a href="bonuses.html">Бонусы</a>
+        <a href="profile.html">Профиль</a>
+        <a href="judge-panel.html">Панель судьи</a>
+        <a href="organizer-panel.html">Панель организатора</a>
+      </nav>
+      <div class="header-right"><div id="auth-controls"></div></div>
+    </header>
+
+    <main>
+      <section class="page-intro live-intro">
+        <div>
+          <span class="eyebrow">Live каналы</span>
+          <h1>Смотри матчи в прямом эфире и переключайся между записями</h1>
+          <p>Лента трансляций сделана в формате стрим-платформы: главный эфир, лайв-метки, быстрый доступ к записи.</p>
+        </div>
+        <div class="page-intro-media">
+          <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1200&q=80" alt="Онлайн трансляция матча" />
+        </div>
+      </section>
+
+      <section class="panel live-hub">
+        <div id="live-featured" class="live-featured">
+          <p class="muted">Подготавливаем главный эфир...</p>
+        </div>
+        <aside class="live-side">
+          <div class="live-side-card">
+            <p class="eyebrow">Сейчас в эфире</p>
+            <h3 id="live-now-count">0 каналов live</h3>
+            <p class="muted">Статус обновляется автоматически по расписанию матчей.</p>
+          </div>
+          <div class="live-side-card">
+            <p class="eyebrow">Быстрый чат</p>
+            <div class="live-chat-mock">
+              <p><strong>Организатор:</strong> Добро пожаловать на эфир.</p>
+              <p><strong>Зритель_01:</strong> Отличная подача.</p>
+              <p><strong>Судья:</strong> Через 10 минут следующий раунд.</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="live-list" class="panel live-grid">
+        <p class="muted">Загрузка трансляций...</p>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 QazaqCompetition. Платформа соревнований нового поколения.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
